@@ -2,7 +2,7 @@ import Axios from "axios";
 import { Action, Dispatch } from "redux";
 import { APIKEY } from "../config";
 import { setCurrentLocation, setWeatherData, toggleMetrics } from "./redux/WeatherActions";
-import { Location, WeatherData } from "./redux/WeatherReducer";
+import { Location, WeatherData } from "./types";
 
 const constructForecastCall = (latitude: number, longitude: number) => {
   return `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&appid=${APIKEY}`;

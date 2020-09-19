@@ -1,4 +1,4 @@
-import { Location, WeatherData } from "./WeatherReducer";
+import { Location, WeatherData } from "../types";
 
 export const SETWEATHERDATA = "WeatherWidget::SETWEATHERDATA";
 export const SETCURRENTLOCATION = "WeatherWidget::SETCURRENTLOCATION";

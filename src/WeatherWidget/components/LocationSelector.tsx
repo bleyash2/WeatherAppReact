@@ -3,8 +3,8 @@ import { TextField, useMediaQuery, useTheme } from "@material-ui/core";
 import { Autocomplete } from "@material-ui/lab";
 import LocationsData from "../data/city.list.min.json";
 import { ListChildComponentProps, VariableSizeList } from "react-window";
-import { Location } from "../redux/WeatherReducer";
 import { useTypedSelector } from "../../allReducers";
+import { Location } from "../types";
 
 // Crazy Local Location Selector using Provided Locations from OpenWeatherMap. Had to use React-Window to Help render the insanely...
 // ...large amount of data, there is most likely a way better way to do this, however leaving as if for now as is outside of scope, ...
@@ -83,6 +83,8 @@ const ListboxComponent = React.forwardRef<HTMLDivElement>(function ListboxCompon
 interface LocationSelectorProps {
   setLocation: (location: Location) => void;
 }
+
+// Makes use of the Material Design AutoComplete Dropdown https://material-ui.com/components/autocomplete/
 
 export default function LocationSelector({ setLocation }: LocationSelectorProps) {
   const locationData = LocationsData as Location[];
