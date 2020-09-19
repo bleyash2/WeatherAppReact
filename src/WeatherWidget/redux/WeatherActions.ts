@@ -1,9 +1,11 @@
 import { Location, WeatherData } from "../types";
 
+// Redux Action Constants
 export const SETWEATHERDATA = "WeatherWidget::SETWEATHERDATA";
 export const SETCURRENTLOCATION = "WeatherWidget::SETCURRENTLOCATION";
 export const TOGGLEMETRICS = "WeatherWidget::TOGGLEMETRICS";
 
+// Redux Actions
 export interface SetWeatherDataAction {
   type: typeof SETWEATHERDATA;
   payload: { placeId: number; data: WeatherData };

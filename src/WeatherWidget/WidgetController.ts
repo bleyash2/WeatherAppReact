@@ -4,6 +4,7 @@ import { APIKEY } from "../config";
 import { setCurrentLocation, setWeatherData, toggleMetrics } from "./redux/WeatherActions";
 import { Location, WeatherData } from "./types";
 
+// Helper Function to help contruct API Url
 const constructForecastCall = (latitude: number, longitude: number) => {
   return `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&appid=${APIKEY}`;
 };
@@ -21,6 +22,7 @@ export default class WidgetController {
     } else throw new Error("Invalid Dispatch");
   }
 
+  // Functionality for Retreiving Weather Data for a Specific Location
   public fetchForcast = async (location: Location) => {
     try {
       const { lat, lon } = location.coord;
@@ -31,6 +33,7 @@ export default class WidgetController {
     }
   };
 
+  // Wrapper Function for Setting the Location within Redux
   public setLocation = (location: Location) => {
     try {
       this.dispatch(setCurrentLocation(location));
@@ -39,6 +42,7 @@ export default class WidgetController {
     }
   };
 
+  // Wrapper Function for Toggling Between the Two Metrics
   public changeMetric = () => {
     try {
       this.dispatch(toggleMetrics());
