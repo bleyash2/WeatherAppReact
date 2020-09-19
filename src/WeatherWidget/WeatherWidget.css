@@ -1,0 +1,89 @@
+.weatherWrapper {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+}
+
+.weatherWrapper .weatherTop {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.weather .weatherTop .locationInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.weatherWrapper .location {
+  margin: 0;
+  color: #9b9b9b;
+  font-weight: 400;
+}
+
+.weatherWrapper .day {
+  margin: 0;
+  color: #9b9b9b;
+  font-weight: 400;
+}
+
+.weatherWrapper .weather {
+  margin: 0;
+  color: #9b9b9b;
+  font-weight: 400;
+  text-transform: capitalize;
+}
+
+.weatherWrapper .weatherDetails {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-bottom: 1rem;
+}
+
+.weatherWrapper .weatherDetails .detailsLeft {
+  flex-direction: row;
+  display: flex;
+}
+
+.weatherWrapper .weatherDetails .detailsRight {
+  flex-direction: column;
+  display: flex;
+  justify-content: space-around;
+}
+
+.weatherWrapper .weatherDetails .detailsRight h5 {
+  margin: 5px;
+  font-weight: 500;
+}
+
+.weatherWrapper .forecast {
+  display: flex;
+  flex-direction: row;
+  overflow: auto;
+  white-space: nowrap;
+  flex-wrap: nowrap;
+  width: 100%;
+  justify-content: space-between;
+  padding-bottom: 1rem;
+}
+
+.weatherWrapper .forecast .forecastCard {
+  align-content: center;
+  text-align: center;
+  display: flex;
+  margin: 0 1rem;
+  width: 100px;
+  flex-direction: column;
+}
+
+.weatherWrapper .forecast .forecastCard h6 {
+  margin: 0;
+}
+
+.weatherWrapper .forecast .forecastCard .low {
+  color: #9b9b9b;
+}
