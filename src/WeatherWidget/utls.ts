@@ -1,8 +1,8 @@
 //  Converts Kelvin Value Temp to Celcius or Imperial
 export const temperatureValue = (kelvinValue: number, currentMetric: "Metric" | "Imperial") => {
   if (currentMetric === "Metric") {
-    return (kelvinValue - 273.15).toPrecision(2);
-  } else return (((kelvinValue - 273.15) * 9) / 5 + 32).toPrecision(2);
+    return Math.round(kelvinValue - 273.15);
+  } else return Math.round(((kelvinValue - 273.15) * 9) / 5 + 32);
 };
 
 //   Converts wind speed from Metres per Second

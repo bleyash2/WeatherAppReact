@@ -3,10 +3,10 @@ import { getCurrentLocalDate, getWeatherDay, temperatureValue, windSpeed } from 
 describe("Utility Function Tests", () => {
   describe("Temperature Value Tests", () => {
     it("Should convert Kelvin to Celsius", () => {
-      expect(temperatureValue(294.15, "Metric")).toEqual("21");
+      expect(temperatureValue(294.15, "Metric")).toEqual(21);
     });
     it("Should convert Kelvin to Ferenheit", () => {
-      expect(temperatureValue(294.15, "Imperial")).toEqual("70");
+      expect(temperatureValue(294.15, "Imperial")).toEqual(70);
     });
   });
 
